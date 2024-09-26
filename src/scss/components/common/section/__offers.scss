@@ -1,0 +1,10 @@
+@at-root{
+    $component: ".section__offers";
+
+    #{$component}{
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+    }
+}

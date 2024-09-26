@@ -1,0 +1,16 @@
+@at-root{
+    $component: &;
+
+    #{$component}{
+        display: flex;
+        
+        @include bp("lg", "down"){
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        
+        @include bp("lg", "up"){
+            column-gap: 40px;
+        }
+    }
+}

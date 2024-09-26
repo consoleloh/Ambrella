@@ -1,0 +1,15 @@
+@at-root{
+    $component: ".benefits__item";
+
+    #{$component}{
+        overflow: hidden;
+        border-radius: 18px;
+        box-shadow: 4px 4px 0 get-color(primary);
+
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+            display: flex;
+        }
+    }
+}

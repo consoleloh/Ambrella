@@ -1,0 +1,16 @@
+@mixin cut_corners_block($color){
+	position: relative;
+	padding: 0 0 6px 6px;
+
+	&:before{
+		content: "";
+		position: absolute;
+		top: 6px;
+		left: 0;
+		width: calc(100% - 6px);
+		height: calc(100% - 6px);
+		background-color: get-color($color);
+		clip-path: polygon(calc(100% - 32px) 0%, 100% 26px, 100% 100%, 20px 100%, 0% calc(100% - 20px), 0 0);
+		z-index: 1;
+	}
+}

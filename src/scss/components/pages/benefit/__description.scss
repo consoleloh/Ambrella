@@ -1,0 +1,13 @@
+@at-root{
+    $component: ".benefit__description";
+
+    #{$component}{
+        font-size: 18px;
+        line-height: 22px;
+
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+    }
+}

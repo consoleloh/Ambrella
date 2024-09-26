@@ -1,0 +1,21 @@
+@at-root{
+    $component: ".benefit__title";
+
+    #{$component}{
+        margin-bottom: 12px;
+        font-family: "New_Zelek", sans-serif;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        @include bp("sm", "up"){
+            margin-bottom: 14px;
+        }
+        @include bp("lg", "up"){
+            margin-bottom: 12px;
+            font-size: 22px;
+            line-height: 27px;
+        }
+    }
+}

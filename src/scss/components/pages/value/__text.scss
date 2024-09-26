@@ -1,0 +1,8 @@
+@at-root{
+    $component: ".value__text";
+
+    #{$component}{
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

@@ -1,0 +1,14 @@
+@at-root{
+    $component: ".value__banner";
+
+    #{$component}{
+        @include bp("sm", "down"){
+            width: 83px;
+        }
+
+        @include bp("sm", "up"){
+            flex-shrink: 0;
+        }
+        @include bp("lg", "up"){}
+    }
+}

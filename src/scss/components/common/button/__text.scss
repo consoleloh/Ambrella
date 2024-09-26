@@ -1,0 +1,15 @@
+@at-root{
+    $component: ".button__text";
+
+    #{$component}{
+        font-weight: 900;
+        font-size: 22px;
+        line-height: 26px;
+        color: get-color(white);
+        transform: skew(15deg);
+
+        @include bp("sm", "up"){}
+        @include bp("lg", "up"){
+        }
+    }
+}

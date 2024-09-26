@@ -1,0 +1,10 @@
+@at-root{
+    $component: ".cards__item";
+
+    #{$component}{
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+    }
+}

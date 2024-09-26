@@ -1,0 +1,13 @@
+@at-root{
+    $component: ".offer__text";
+
+    #{$component}{
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+        padding: 16px 20px 30px;
+
+        @include bp("sm", "up"){
+        }
+    }
+}

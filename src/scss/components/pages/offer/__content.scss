@@ -1,0 +1,14 @@
+@at-root{
+    $component: ".offer__content";
+
+    #{$component}{
+        border-radius: 18px;
+        font-size: 18px;
+        line-height: 22px;
+        background-color: get-color(white);
+
+        @include bp("sm", "up"){
+            height: 100%;
+        }
+    }
+}

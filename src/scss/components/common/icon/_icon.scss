@@ -1,0 +1,12 @@
+@at-root{
+    $component: &;
+
+    #{$component}{
+        fill: inherit !important;
+
+        path{
+            fill: inherit !important;
+        }
+        
+    }
+}

@@ -1,0 +1,46 @@
+@at-root{
+    $component: ".section__text";
+
+    #{$component}{
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+
+        &--light{
+            color: get-color(white);
+        }
+    }
+
+    .section--methods{
+        #{$component}{
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+
+            @include bp("lg", "up"){
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    .section--rent{
+        #{$component}{
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+
+            @include bp("lg", "up"){
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

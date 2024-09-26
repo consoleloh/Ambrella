@@ -1,0 +1,33 @@
+@at-root{
+    $component: &;
+
+    #{$component}{
+        display: flex;
+        gap: 20px;
+        
+        @include bp("sm", "down"){
+            flex-direction: column;
+        }
+
+        @include bp("sm", "up"){
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        @include bp("lg", "up"){
+            flex-wrap: nowrap;
+            position: relative;
+
+            &:before{
+                content: "";
+                position: absolute;
+                top: 32px;
+                left: 50%;
+                width: 1000px;
+                height: 1px;
+                border-bottom: 1px dashed get-color(primary);
+                transform: translateX(-50%);
+            }
+        }
+    }
+}

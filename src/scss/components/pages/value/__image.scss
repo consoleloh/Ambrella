@@ -1,0 +1,11 @@
+@at-root{
+    $component: ".value__image";
+
+    #{$component}{
+        max-width: 100%;
+        height: auto;
+
+        @include bp("sm", "up"){}
+        @include bp("lg", "up"){}
+    }
+}

@@ -1,0 +1,17 @@
+@at-root{
+    $component: &;
+
+    #{$component}{
+        counter-reset: problem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        
+        @include bp("sm", "up"){
+            row-gap: 20px;
+        }
+        
+        @include bp("lg", "up"){
+        }
+    }
+}

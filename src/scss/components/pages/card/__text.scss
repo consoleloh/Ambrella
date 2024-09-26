@@ -1,0 +1,45 @@
+@at-root{
+    $component: ".card__text";
+
+    #{$component}{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        row-gap: 12px;
+        padding: 20px;
+        border-radius: 8px 0 8px 8px;
+        font-size: 18px;
+        line-height: 22px;
+        background-color: get-color(white);
+
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+
+        strong{
+            color: get-color(primary);
+        }
+
+        br{
+            @include bp("lg", "down"){
+                display: none;
+            }
+        }
+    }
+
+    .section__cards{
+        &--advantages{
+            #{$component}{
+                font-size: 17px;
+
+                @include bp("sm", "up"){
+                    font-size: 18px;
+                }
+                @include bp("lg", "up"){
+                    padding: 25px;
+                }
+            }
+        }
+    }
+}

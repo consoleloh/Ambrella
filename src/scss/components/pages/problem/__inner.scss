@@ -1,0 +1,15 @@
+@at-root{
+    $component: ".problem__inner";
+
+    #{$component}{
+        padding: 20px;
+        border-radius: 18px;
+        background-color: get-color(white);
+
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+            padding: 30px 40px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@at-root{
+    $component: ".offer__inner";
+
+    #{$component}{
+        padding: 1px;
+        border-radius: 18px;
+        background: linear-gradient(105deg, get-color(white), get-color(primary));
+        box-shadow: 0 2px 6px rgba(get-color(grey-darken), 10%);
+
+        @include bp("sm", "up"){
+            flex: 1;
+        }
+    }
+}

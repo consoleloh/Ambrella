@@ -1,0 +1,20 @@
+@at-root{
+    $component: ".value__inner";
+
+    #{$component}{
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        position: relative;
+        padding: 20px 20px 20px 0;
+
+        @include bp("sm", "up"){
+            column-gap: 26px;
+            padding-right: 146px;
+        }
+
+        @include bp("lg", "up"){
+            padding-right: 86px;
+        }
+    }
+}

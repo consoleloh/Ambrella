@@ -1,0 +1,13 @@
+@at-root{
+    $component: ".benefit__content";
+
+    #{$component}{
+        padding: 30px;
+        
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+            padding: 40px 40px 30px;
+        }
+    }
+}

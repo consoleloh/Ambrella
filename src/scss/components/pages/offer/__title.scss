@@ -1,0 +1,28 @@
+@at-root{
+    $component: ".offer__title";
+
+    #{$component}{
+        margin-bottom: 12px;
+        padding: 14px;
+        border-radius: 8px;
+        font-family: "New_Zelek", sans-serif;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        text-align: center;
+        color: get-color(white);
+        background-color: get-color(primary);
+
+        @include bp("sm", "up"){
+            width: 248px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @include bp("lg", "up"){
+            width: 306px;
+            margin-bottom: 8px;
+            padding: 20px;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@at-root{
+    $component: ".offer__subtitle";
+
+    #{$component}{
+        display: block;
+        padding: 31px 20px;
+        border-bottom: 1px solid get-color(grey-light);
+
+        @include bp("sm", "up"){
+        }
+    }
+}

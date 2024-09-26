@@ -1,0 +1,22 @@
+@at-root{
+    $component: &;
+
+    #{$component}{
+        display: flex;
+        
+        @include bp("sm", "down"){
+            flex-direction: column;
+            row-gap: 16px;
+        }
+        
+        @include bp("sm", "up"){
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        @include bp("lg", "up"){
+            flex-wrap: nowrap;
+        }
+    }
+}

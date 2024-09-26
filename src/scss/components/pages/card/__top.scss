@@ -1,0 +1,83 @@
+@at-root{
+    $component: ".card__top";
+
+    #{$component}{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        &:after{
+            content: "";
+            flex: 1;
+            border-top-right-radius: 8px;
+            background-color: get-color(white);
+            background-image: url(../img/card_top.svg);
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            mix-blend-mode: unset;
+        }
+
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+    }
+
+    .section__cards{
+        &--approach{
+            #{$component}{
+                &:after{
+                    max-width: 60px;
+
+                    @include bp("sm", "up"){
+                        max-width: none;
+                    }
+                    @include bp("lg", "up"){
+                        max-width: 150px;
+                    }
+                }
+            }
+        }
+        &--advantages{
+            #{$component}{
+                &:after{
+                    max-width: 72px;
+
+                    @include bp("sm", "up"){
+                        max-width: none;
+                    }
+                    @include bp("lg", "up"){
+                        max-width: 110px;
+                    }
+                }
+            }
+        }
+        &--rent{
+            #{$component}{
+                &:after{
+                    max-width: 64px;
+
+                    @include bp("sm", "up"){
+                    }
+                    @include bp("lg", "up"){
+                    }
+                }
+            }
+        }
+        &--specials{
+            #{$component}{
+                &:after{
+                    max-width: 72px;
+
+                    @include bp("sm", "up"){
+                        max-width: none;
+                    }
+                    @include bp("lg", "up"){
+                        max-width: 110px;
+                    }
+                }
+            }
+        }
+    }
+}

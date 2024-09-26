@@ -1,0 +1,48 @@
+@at-root{
+    $component: ".section__title";
+
+    #{$component}{
+        margin-bottom: 30px;
+        font-family: "New_Zelek", sans-serif;
+        font-size: 26px;
+        line-height: 32px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+        color: get-color(grey-darken);
+
+        @include bp("sm", "up"){
+            font-size: 32px;
+            line-height: 40px;
+        }
+        @include bp("lg", "up"){
+            margin-bottom: 40px;
+        }
+
+        &--light{
+            color: get-color(white);
+        }
+    }
+
+    .section--values{
+        #{$component}{
+            text-align: left;
+
+            @include bp("lg", "down"){
+                padding-left: 6px;
+            }
+        }
+    }
+
+    .section--methods{
+        #{$component}{
+            margin-bottom: 16px;
+        }
+    }
+
+    .section--rent{
+        #{$component}{
+            margin-bottom: 16px;
+        }
+    }
+}

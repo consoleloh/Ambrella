@@ -1,0 +1,15 @@
+@at-root{
+    $component: ".offers__item";
+
+    #{$component}{
+        @include bp("sm", "up"){
+            display: flex;
+            flex-direction: column;
+            flex-basis: calc(50% - 10px);
+        }
+        @include bp("lg", "up"){
+            flex: 1;
+            position: relative;
+        }
+    }
+}

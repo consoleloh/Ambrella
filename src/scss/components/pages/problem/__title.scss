@@ -1,0 +1,18 @@
+@at-root{
+    $component: ".problem__title";
+
+    #{$component}{
+        padding-right: 40px;
+        font-size: 20px;
+        line-height: 24px;
+
+        &:before{
+            content: counter(problem) " - ";
+        }
+
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+    }
+}

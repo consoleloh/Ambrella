@@ -1,0 +1,28 @@
+@at-root{
+    $component: ".section__inner";
+
+    #{$component}{
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+    }
+
+    .section--problems{
+        #{$component}{
+            @include bp("lg", "up"){
+                padding-right: 100px;
+                padding-left: 100px;
+            }
+        }
+    }
+
+    .section--benefits{
+        #{$component}{
+            @include bp("lg", "up"){
+                padding-right: 90px;
+                padding-left: 90px;
+            }
+        }
+    }
+}

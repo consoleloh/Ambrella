@@ -1,0 +1,60 @@
+@at-root{
+    $component: ".section__cards";
+
+    #{$component}{
+        display: flex;
+
+        @include bp("sm", "down"){
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        
+        @include bp("sm", "up"){
+            justify-content: center;
+            gap: 20px;
+        }
+
+        @include bp("lg", "up"){
+            margin: 0 -15px;
+        }
+
+        &--approach{
+            @include bp("sm", "up"){
+                flex-wrap: wrap;
+            }
+            @include bp("lg", "up"){
+                flex-wrap: nowrap;
+            }
+        }
+
+        &--advantages{
+            @include bp("sm", "up"){
+                flex-wrap: wrap;
+            }
+            @include bp("lg", "up"){
+                flex-wrap: nowrap;
+            }
+        }
+
+        &--rent{
+            @include bp("sm", "up"){
+                flex-wrap: wrap;
+            }
+            @include bp("lg", "up"){
+                flex-wrap: nowrap;
+            }
+        }
+
+        &--specials{
+            margin-bottom: 30px;
+
+            @include bp("sm", "up"){
+                flex-wrap: wrap;
+            }
+            @include bp("lg", "up"){
+                flex-wrap: nowrap;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

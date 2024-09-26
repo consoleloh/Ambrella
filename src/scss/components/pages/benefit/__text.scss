@@ -1,0 +1,20 @@
+@at-root{
+    $component: ".benefit__text";
+
+    #{$component}{
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+        font-size: 18px;
+        line-height: 22px;
+
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+
+        strong{
+            color: get-color(primary);
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@at-root{
+    $component: ".methods__item";
+
+    #{$component}{
+        @include cut_corners_block(secondary);
+
+        font-size: 20px;
+        line-height: 24px;
+
+        @include bp("sm", "up"){
+            flex-basis: calc(50% - 10px);
+        }
+        @include bp("lg", "up"){
+            flex: 1;
+        }
+    }
+}

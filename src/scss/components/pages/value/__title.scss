@@ -1,0 +1,16 @@
+@at-root{
+    $component: ".value__title";
+
+    #{$component}{
+        margin-bottom: 10px;
+        font-family: "New_Zelek", sans-serif;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 1px;
+
+        @include bp("sm", "up"){
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+}

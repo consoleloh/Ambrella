@@ -1,0 +1,10 @@
+@at-root{
+    $component: ".section__problems";
+
+    #{$component}{
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+    }
+}

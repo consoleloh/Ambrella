@@ -1,0 +1,48 @@
+@at-root{
+    $component: ".card__title";
+
+    #{$component}{
+        position: relative;
+        padding: 20px 0 20px 20px;
+        font-family: "New_Zelek", sans-serif;
+        line-height: 1em;
+        letter-spacing: 1px;
+        color: get-color(white);
+    }
+
+    .section__cards{
+        &--approach{
+            #{$component}{
+                font-size: 20px;
+            }
+        }
+        &--advantages{
+            #{$component}{
+                font-size: 20px;
+                line-height: 25px;
+
+                @include bp("sm", "up"){
+
+                }
+                @include bp("lg", "up"){
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+            }
+        }
+        &--specials{
+            #{$component}{
+                font-size: 20px;
+                line-height: 25px;
+
+                @include bp("sm", "up"){
+
+                }
+                @include bp("lg", "up"){
+                    font-size: 22px;
+                    line-height: 27px;
+                }
+            }
+        }
+    }
+}

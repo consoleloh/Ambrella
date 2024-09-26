@@ -1,0 +1,41 @@
+@font-face {
+	font-family: "New_Zelek";
+	src: url("New_Zelek.eot");
+	src: local("New_Zelek"),
+		url("../fonts/New_Zelek/New_Zelek.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/New_Zelek/New_Zelek.woff") format("woff"),
+		url("../fonts/New_Zelek/New_Zelek.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato/Lato-Regular.eot");
+    src: local("Lato Regular"),
+        url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato/Lato-Bold.eot");
+    src: local("Lato Bold"),
+        url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato/Lato-Black.eot");
+    src: local("Lato Black"),
+        url("../fonts/Lato/Lato-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}

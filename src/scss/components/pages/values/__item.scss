@@ -1,0 +1,7 @@
+@at-root{
+    $component: ".values__item";
+
+    #{$component}{
+        @include cut_corners_block(primary);
+    }
+}

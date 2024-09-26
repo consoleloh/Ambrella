@@ -1,0 +1,12 @@
+.section{
+	@import "section";
+	@import "_inner";
+	@import "_title";
+	@import "_text";
+	@import "_control";
+	
+	@import "_values";
+	@import "_methods";
+	@import "_problems";
+	@import "_cards";
+}
