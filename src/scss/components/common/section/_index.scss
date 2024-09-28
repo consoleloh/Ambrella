@@ -1,6 +1,9 @@
 .section{
 	@import "section";
 	@import "_inner";
+	@import "_content";
+	@import "_banner";
+	@import "_top";
 	@import "_title";
 	@import "_text";
 	@import "_control";

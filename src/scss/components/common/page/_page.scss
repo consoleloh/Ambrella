@@ -2,7 +2,19 @@
     $component: &;
 
     #{$component}{
-        display: flex;
-        flex-direction: column;
+        padding-top: 90px;
+
+        @include bp("lg", "up"){
+            padding-top: 103px;
+        }
+
+        &--main{
+            display: flex;
+            flex-direction: column;
+            background-image: url(../img/hero_bg_desktop.webp);
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     }
 }

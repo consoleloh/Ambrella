@@ -2,8 +2,17 @@
     $component: ".nav__link";
 
     #{$component}{
-        
         @include bp("sm", "up"){}
         @include bp("lg", "up"){}        
+    }
+
+    .page__header{
+        #{$component}{
+            transition: color 0.3s;
+
+            &:hover{
+                color: get-color(secondary);
+            }
+        }
     }
 }

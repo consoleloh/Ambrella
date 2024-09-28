@@ -1,0 +1,32 @@
+@at-root{
+    $component: ".section__banner";
+
+    #{$component}{
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+    }
+
+    .section--about{
+        #{$component}{
+            @include bp("sm", "down"){
+                display: none;
+            }
+            @include bp("sm", "up"){
+                flex-basis: 240px;
+                flex-shrink: 0;
+                padding-top: 32px;
+            }
+            @include bp("lg", "up"){
+                flex-basis: auto;
+                padding-top: 20px;
+            }
+
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

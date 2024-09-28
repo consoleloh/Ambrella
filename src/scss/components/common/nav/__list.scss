@@ -10,6 +10,30 @@
         @include bp("lg", "up"){}
     }
 
+    .header__nav{
+        &--mobile{
+            #{$component}{
+
+                @include bp("sm", "up"){}
+                @include bp("lg", "down"){
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 24px;
+                }
+            }
+        }
+
+        &--desktop{
+            #{$component}{
+                @include bp("lg", "up"){
+                    display: flex;
+                    align-items: center;
+                    column-gap: 40px;
+                }
+            }
+        }
+    }
+
     .page__footer{
         #{$component}{
             display: flex;

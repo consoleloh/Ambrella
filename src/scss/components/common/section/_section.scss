@@ -19,15 +19,15 @@
         &--methods{
             padding: 40px 0;
             background-color: get-color(primary);
-            background-image: url(../img/methods_bg_mobile.png);
+            background-image: url(../img/methods_bg_mobile.webp);
 
             @include bp("sm", "up"){
-                background-image: url(../img/methods_bg_tablet.png);
+                background-image: url(../img/methods_bg_tablet.webp);
             }
             @include bp("lg", "up"){
                 padding-top: 100px;
                 padding-bottom: 100px;
-                background-image: url(../img/methods_bg_desktop.png);
+                background-image: url(../img/methods_bg_desktop.webp);
             }
         }
 
@@ -44,32 +44,32 @@
         &--rent{
             padding: 70px 0 60px;
             background-position: top center;
-            background-image: url(../img/rent_bg_mobile.png);
+            background-image: url(../img/rent_bg_mobile.webp);
 
             @include bp("sm", "up"){
                 padding-bottom: 50px;
-                background-image: url(../img/rent_bg_tablet.png);
+                background-image: url(../img/rent_bg_tablet.webp);
             }
             @include bp("lg", "up"){
                 padding-top: 100px;
                 padding-bottom: 100px;
-                background-image: url(../img/rent_bg_desktop.png);
+                background-image: url(../img/rent_bg_desktop.webp);
             }
         }
 
         &--specials{
             padding: 40px 0;
-            background-image: url(../img/specials_bg_mobile.png);
+            background-image: url(../img/specials_bg_mobile.webp);
 
             @include bp("sm", "up"){
                 padding-top: 50px;
                 padding-bottom: 50px;
-                background-image: url(../img/specials_bg_tablet.png);
+                background-image: url(../img/specials_bg_tablet.webp);
             }
             @include bp("lg", "up"){
                 padding-top: 100px;
                 padding-bottom: 100px;
-                background-image: url(../img/specials_bg_desktop.png);
+                background-image: url(../img/specials_bg_desktop.webp);
             }
         }
 
@@ -78,26 +78,26 @@
         }
     }
 
-    .webp{
+    .no-webp{
         #{$component}{
             &--methods{
-                background-image: url(../img/methods_bg_mobile.webp);
+                background-image: url(../img/methods_bg_mobile.png);
     
                 @include bp("sm", "up"){
-                    background-image: url(../img/methods_bg_tablet.webp);
+                    background-image: url(../img/methods_bg_tablet.png);
                 }
                 @include bp("lg", "up"){
-                    background-image: url(../img/methods_bg_desktop.webp);
+                    background-image: url(../img/methods_bg_desktop.png);
                 }
             }
             &--rent{
-                background-image: url(../img/rent_bg_mobile.webp);
+                background-image: url(../img/rent_bg_mobile.png);
     
                 @include bp("sm", "up"){
-                    background-image: url(../img/rent_bg_tablet.webp);
+                    background-image: url(../img/rent_bg_tablet.png);
                 }
                 @include bp("lg", "up"){
-                    background-image: url(../img/rent_bg_desktop.webp);
+                    background-image: url(../img/rent_bg_desktop.png);
                 }
             }
         }

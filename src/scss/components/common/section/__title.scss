@@ -34,6 +34,24 @@
         }
     }
 
+    .section--about{
+        #{$component}{
+            margin-bottom: 0;
+            text-align: left;
+
+            @include bp("sm", "down"){
+                padding: 20px 0 20px 20px;
+                font-size: 20px;
+                line-height: 25px;
+                color: get-color(white);
+            }
+
+            @include bp("lg", "up"){
+                margin-bottom: 0;
+            }
+        }
+    }
+
     .section--methods{
         #{$component}{
             margin-bottom: 16px;

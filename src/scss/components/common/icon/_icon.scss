@@ -2,11 +2,10 @@
     $component: &;
 
     #{$component}{
-        fill: inherit !important;
+        // fill: inherit !important;
 
-        path{
-            fill: inherit !important;
-        }
-        
+        // path{
+        //     fill: inherit !important;
+        // }
     }
 }

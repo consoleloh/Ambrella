@@ -1,0 +1,32 @@
+@at-root{
+    $component: ".section__top";
+
+    #{$component}{
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+    }
+
+    .section--about{
+        #{$component}{
+            @include bp("sm", "down"){
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+        
+                &:after{
+                    content: "";
+                    flex: 1;
+                    max-width: 70px;
+                    border-top-right-radius: 8px;
+                    background-color: get-color(white);
+                    background-image: url(../img/card_top.svg);
+                    background-position: top left;
+                    background-repeat: no-repeat;
+                    background-size: auto 100%;
+                }
+            }
+        }
+    }
+}

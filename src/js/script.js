@@ -1,6 +1,6 @@
 'use strict'
 ;(function(){
-    const checkWEBPInit = () => {
+    const checkWEBP = () => {
         const isSupportWebp = () => {
             const elem = document.createElement('canvas');
         
@@ -11,9 +11,65 @@
             }
         }
         
-        document.documentElement.classList.add(isSupportWebp() ? 'webp' : 'no-webp');
+        document.documentElement.classList.add(!isSupportWebp() ? 'no-webp' : 'webp');
     };
 
+    const toggleMenu = () => {
+        const header = document.querySelector('.page__header');
+        const control = document.querySelector('.js-toggle-menu');
+
+        control.addEventListener('click', () => {
+            header.classList.toggle('page__header--opened');
+        });
+    };
+
+    const scrollMenu = () => {
+        window.addEventListener("scroll", () => {
+            const h = document.querySelector('.page__header');
+            const b = document.body;
+            let d = document.documentElement;
+            d = (d.clientHeight) ? d : b;
+        
+            if (d.scrollTop > 1){
+                if (!h.classList.contains('page__header--offset')){
+                    h.classList.add('page__header--offset');
+                }
+            } else {
+                h.classList.remove('page__header--offset')
+            }
+        });
+    };
+
+    const scrollTo = () => {
+        const headerHeight = document.querySelector('.page__header').offsetHeight;
+
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                const section = document.querySelector(link.hash);
+                let top = window.scrollY + section.getBoundingClientRect().top - headerHeight;
+
+                if (top > 0) {
+                    top -= 20;
+                }
+
+                window.scrollTo({
+                    top: top,
+                    left: 0,
+                    behavior: "smooth"
+                });
+
+                document.querySelector('.page__header').classList.remove('page__header--opened');
+            });
+        });
+    };
+    
+    const popupsInit = () => {
+        Fancybox.bind('[data-fancybox]', {
+            closeButton: false
+        });
+    };
 
     const collapseProblem = () => {
         document.querySelectorAll('.js-problem-collapse').forEach(problem => {
@@ -63,7 +119,11 @@
         window.addEventListener('resize', slider);
     };
 
-    checkWEBPInit();
+    checkWEBP();
+    toggleMenu();
+    scrollMenu();
+    scrollTo();
+    popupsInit();
     collapseProblem();
     carouselBlog();
 })();

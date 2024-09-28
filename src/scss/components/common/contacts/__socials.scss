@@ -6,6 +6,23 @@
         @include bp("lg", "up"){}        
     }
 
+    .page__header{
+        #{$component}{
+            order: 2;
+            padding: 8px 0 20px;
+
+            @include bp("sm", "up"){
+                position: absolute;
+                top: 210px;
+                right: 60px;
+                padding: 0;
+            }
+            @include bp("lg", "up"){
+                display: none;
+            }        
+        }
+    }
+
     .section--contacts{
         #{$component}{
             margin-bottom: 30px;

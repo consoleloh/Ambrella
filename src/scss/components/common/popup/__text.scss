@@ -1,0 +1,9 @@
+@at-root{
+    $component: ".popup__text";
+
+    #{$component}{
+        
+        @include bp("sm", "up"){}
+        @include bp("lg", "up"){}
+    }
+}

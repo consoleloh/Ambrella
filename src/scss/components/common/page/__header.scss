@@ -1,0 +1,36 @@
+@at-root{
+    $component: ".page__header";
+
+    #{$component}{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-bottom: 20px;
+        z-index: 999;
+        transition: all 0.3s;
+
+        @include bp("sm", "up"){}
+        @include bp("lg", "down"){
+            overflow: hidden;
+            height: 100vh;
+            max-height: 90px;
+        }
+        @include bp("lg", "up"){
+            padding: 24px 0;
+        }
+
+        &--offset{
+            background-color: get-color(white);
+            box-shadow: 0 5px 5px rgba(get-color(black), 15%);
+        }
+
+        &--opened{
+            @include bp("lg", "down"){
+                overflow-y: auto;
+                max-height: 100vh;
+                background-color: get-color(white);
+            }
+        }
+    }
+}

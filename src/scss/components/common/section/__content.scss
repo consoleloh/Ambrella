@@ -1,0 +1,14 @@
+@at-root{
+    $component: ".section__content";
+
+    #{$component}{
+        @include bp("sm", "up"){
+            display: flex;
+            flex-direction: column;
+            row-gap: 52px;
+        }
+        @include bp("lg", "up"){
+            row-gap: 88px;
+        }
+    }
+}

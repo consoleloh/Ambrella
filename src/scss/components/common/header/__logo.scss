@@ -1,0 +1,9 @@
+@at-root{
+    $component: ".header__logo";
+
+    #{$component}{
+        @include bp("lg", "down"){
+            padding: 20px 0;
+        }      
+    }
+}

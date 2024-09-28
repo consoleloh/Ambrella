@@ -1,2 +1,108 @@
-header.page__header.header
-    .
+header.header.page__header#header
+    ._container.container 
+        ._inner 
+            a.logo._logo(href="#top")
+                img._icon(src="./img/logo.svg" width="55" height="55" alt="Ambrellabio.tech" loading="lazy")
+                
+                span._text 
+                    | Ambrellabio.tech
+
+            nav.nav._nav.-mobile
+                ul._list 
+                    li._item 
+                        a._link(href="#top")
+                            | Главная
+                            
+                    li._item 
+                        a._link(href="#about")
+                            | О компании
+                            
+                    li._item 
+                        a._link(href="#directions")
+                            | Наши направления
+                            
+                    li._item 
+                        a._link(href="#values")
+                            | Наши ценности
+                            
+                    li._item 
+                        a._link(href="#methods")
+                            | Биоинженерия
+                            
+                    li._item 
+                        a._link(href="#rent")
+                            | Аренда компьютеров
+                            
+                    li._item 
+                        a._link(href="#advantages")
+                            | Почему мы?
+
+                    li._item 
+                        a._link(href="#blog")
+                            | Новости
+
+                    li._item 
+                        a._link(href="#contacts")
+                            | Контакты
+
+            nav.nav._nav.-desktop
+                ul._list 
+                    li._item 
+                        a._link(href="#about")
+                            | О компании
+                            
+                    li._item 
+                        a._link(href="#directions")
+                            | Наши направления
+                            
+                    li._item 
+                        a._link(href="#values")
+                            | Наши ценности
+                            
+                    li._item 
+                        a._link(href="#advantages")
+                            | Почему мы?
+
+                    li._item 
+                        a._link(href="#blog")
+                            | Новости
+            
+            .contacts._contacts 
+                ._list.-top
+                    a._item.-user(href="#")
+                        img(src="img/icons/user.svg" width="22" height="22" alt="user")
+                        | Личный кабинет
+                        
+                    a._item.-phone(href="tel:+7 (495) 108-43-21")
+                        img(src="img/icons/phone.svg" width="22" height="22" alt="phone")
+                        | +7 (495) 108-43-21
+                        
+                ul._list.-bottom
+                    li._item
+                        strong
+                            | Email:
+                        a(href="mailto:info@ambrellabio.tech") 
+                            | info@ambrellabio.tech
+
+                    li._item
+                        strong
+                            | Адрес компании: 
+                        | 129110, г. Москва, Гиляровского, 57, стр. 1
+                        
+
+                .socials._socials 
+                    a.social._item(href="https://web.whatsapp.com/" target="_blank")
+                        img._icon(src="img/whatsapp.svg" width="28" height="28" alt="WhatsApp" loading="lazy")
+                        
+                    a.social._item(href="https://web.telegram.org/" target="_blank")
+                        img._icon(src="img/telegram.svg" width="29" height="22" alt="Telegram" loading="lazy")
+
+            button.button._control.-popup(type="button" data-fancybox data-src="#popupCallback")
+                span._text
+                    | Оставить заявку
+
+            button._control.-menu.js-toggle-menu(type="button" aria-label="Меню")
+                    svg(width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        line(y1="1.5" x2="30" y2="1.5" stroke-width="3")
+                        line(y1="11.5" x2="30" y2="11.5" stroke-width="3")
+                        line(y1="22.5" x2="30" y2="22.5" stroke-width="3")

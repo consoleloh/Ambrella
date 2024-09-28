@@ -8,6 +8,37 @@
         }
     }
 
+    .section--about{
+        #{$component}{
+            @include bp("sm", "down"){
+                position: relative;
+                padding: 0 6px 6px 0;
+                border-radius: 8px;
+                background-color: get-color(primary);
+            }
+            @include bp("sm", "up"){
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: flex-start;
+                column-gap: 30px;
+                min-height: 326px;
+                margin: 0 -10px;
+                padding: 30px 40px 20px 10px;
+                background-image: url(../img/about_bg_tablet.webp);
+                background-position: top center;
+                background-repeat: no-repeat;
+                // background-size: contain;
+            }
+            @include bp("lg", "up"){
+                column-gap: 86px;
+                min-height: 376px;
+                margin: 0 -13px;
+                padding: 26px 60px 28px;
+                background-image: url(../img/about_bg_desktop.webp);
+            }
+        }
+    }
+
     .section--problems{
         #{$component}{
             @include bp("lg", "up"){

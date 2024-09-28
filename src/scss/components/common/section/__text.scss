@@ -12,6 +12,31 @@
         }
     }
 
+    .section--about{
+        #{$component}{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            font-size: 16px;
+            line-height: 19px;
+
+            @include bp("sm", "down"){
+                padding: 20px;
+                border-radius: 8px 0 8px 8px;
+                background-color: get-color(white);
+            }
+
+            @include bp("lg", "up"){
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            strong{
+                color: get-color(secondary);
+            }
+        }
+    }
+
     .section--methods{
         #{$component}{
             display: flex;

@@ -1,0 +1,11 @@
+@at-root{
+    $component: ".header__contacts";
+
+    #{$component}{
+        @include bp("sm", "up"){}
+        @include bp("lg", "down"){
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
