@@ -1,0 +1,22 @@
+@at-root{
+    $component: ".logo__text";
+
+    #{$component}{
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){}        
+    }
+
+    .page__header{
+        #{$component}{
+            @include bp("sm", "down"){
+                font-size: 18px;
+                line-height: 22px;
+            }
+            @include bp("lg", "up"){}        
+        }
+    }
+}

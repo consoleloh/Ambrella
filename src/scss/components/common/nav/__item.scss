@@ -1,0 +1,26 @@
+@at-root{
+    $component: ".nav__item";
+
+    #{$component}{
+        
+        @include bp("sm", "up"){}
+        @include bp("lg", "up"){}        
+    }
+
+    .page__footer{
+        #{$component}{
+            flex-basis: 50%;
+            flex-shrink: 0;
+            font-size: 16px;
+            line-height: 19px;
+            transition: color 0.3s;
+
+            &:hover{
+                color: get-color(secondary-dark);
+            }
+
+            @include bp("sm", "up"){}
+            @include bp("lg", "up"){}    
+        }
+    }
+}

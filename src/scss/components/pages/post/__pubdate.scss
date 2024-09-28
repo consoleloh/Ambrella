@@ -1,0 +1,26 @@
+@at-root{
+    $component: ".post__pubdate";
+
+    #{$component}{
+
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+    }
+
+    .section--blog{
+        #{$component}{
+            display: block;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: right;
+            color: rgba(get-color(black), 50%);
+            
+            @include bp("sm", "up"){
+            }
+            @include bp("lg", "up"){
+            }
+        }
+    }
+}

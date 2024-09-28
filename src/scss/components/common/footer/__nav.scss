@@ -1,0 +1,13 @@
+@at-root{
+    $component: ".footer__nav";
+
+    #{$component}{
+        margin-bottom: 40px;
+        
+        @include bp("sm", "up"){
+            flex-basis: 360px;
+            flex-shrink: 0;
+        }
+        @include bp("lg", "up"){}
+    }
+}

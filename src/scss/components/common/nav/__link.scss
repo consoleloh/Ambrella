@@ -1,0 +1,9 @@
+@at-root{
+    $component: ".nav__link";
+
+    #{$component}{
+        
+        @include bp("sm", "up"){}
+        @include bp("lg", "up"){}        
+    }
+}

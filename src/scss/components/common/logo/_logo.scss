@@ -1,0 +1,14 @@
+@at-root{
+    $component: &;
+
+    #{$component}{
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        transition: opacity 0.3s;
+
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+}

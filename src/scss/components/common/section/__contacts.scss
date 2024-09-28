@@ -1,0 +1,17 @@
+@at-root{
+    $component: ".section__contacts";
+
+    #{$component}{
+        display: flex;
+        gap: 50px;
+
+        @include bp("sm", "up"){
+            row-gap: 30px;
+        }
+        @include bp("lg", "down"){
+            flex-direction: column;
+        }
+        @include bp("lg", "up"){
+        }
+    }
+}

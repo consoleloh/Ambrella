@@ -1,0 +1,25 @@
+@at-root{
+    $component: ".post__title";
+
+    #{$component}{
+
+        @include bp("sm", "up"){
+
+        }
+        @include bp("lg", "up"){
+        }
+    }
+
+    .section--blog{
+        #{$component}{
+            margin-bottom: 18px;
+            font-size: 18px;
+            line-height: 22px;
+            
+            @include bp("sm", "up"){
+            }
+            @include bp("lg", "up"){
+            }
+        }
+    }
+}

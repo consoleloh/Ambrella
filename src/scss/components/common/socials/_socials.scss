@@ -1,0 +1,11 @@
+@at-root{
+    $component: &;
+
+    #{$component}{
+        display: flex;
+        column-gap: 20px;
+        
+        @include bp("sm", "up"){}
+        @include bp("lg", "up"){}    
+    }
+}

@@ -1,0 +1,13 @@
+@at-root{
+    $component: ".page__footer";
+
+    #{$component}{
+        padding: 30px 0;
+        background-color: get-color(footer-bg);
+        
+        @include bp("sm", "up"){}
+        @include bp("lg", "up"){
+            padding: 50px 0;
+        }        
+    }
+}

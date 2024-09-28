@@ -1,0 +1,13 @@
+@at-root{
+    $component: ".posts__wrapper";
+
+    #{$component}{
+
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+            display: flex;
+            gap: 20px;
+        }
+    }
+}

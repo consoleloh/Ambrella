@@ -1,0 +1,12 @@
+@at-root{
+    $component: ".posts__item";
+
+    #{$component}{
+        @include cut_corners_block(primary);
+
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+    }
+}

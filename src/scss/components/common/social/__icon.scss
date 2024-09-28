@@ -1,0 +1,13 @@
+@at-root{
+    $component: ".social__icon";
+
+    #{$component}{
+        width: 28px;
+        height: auto;
+        
+        @include bp("sm", "up"){}
+        @include bp("lg", "up"){
+            width: 16px;
+        }        
+    }
+}

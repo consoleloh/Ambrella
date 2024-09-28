@@ -1,0 +1,8 @@
+.post{
+	@import "post";
+	@import "_wrapper";
+	@import "_inner";
+	@import "_title";
+	@import "_link";
+	@import "_pubdate";
+}

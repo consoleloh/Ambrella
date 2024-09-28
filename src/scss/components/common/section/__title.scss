@@ -45,4 +45,18 @@
             margin-bottom: 16px;
         }
     }
+
+    .section--contacts{
+        #{$component}{
+            margin-bottom: 20px;
+
+            @include bp("sm", "up"){
+                margin-bottom: 30px;
+            }
+
+            @include bp("lg", "up"){
+                margin-bottom: 50px;
+            }
+        }
+    }
 }

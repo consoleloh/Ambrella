@@ -4,10 +4,6 @@
     #{$component}{
         @include cut_corners_content();
 
-        position: relative;
-        filter: drop-shadow(0 0 8px rgba(get-color(grey-darken), 15%));
-        z-index: 2;
-
         &:before{
             border-width: 1px;
             border-style: solid;

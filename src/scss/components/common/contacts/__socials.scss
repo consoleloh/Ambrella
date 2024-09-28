@@ -1,0 +1,33 @@
+@at-root{
+    $component: ".contacts__socials";
+
+    #{$component}{
+        @include bp("sm", "up"){}
+        @include bp("lg", "up"){}        
+    }
+
+    .section--contacts{
+        #{$component}{
+            margin-bottom: 30px;
+        
+            @include bp("sm", "up"){}
+            @include bp("lg", "up"){
+                margin-bottom: 50px;
+            }  
+        }
+    }
+
+    .page__footer{
+        #{$component}{
+            @include bp("sm", "down"){
+                justify-content: center;
+            }
+            @include bp("sm", "up"){
+                margin-bottom: 30px;
+            }
+            @include bp("lg", "up"){
+                margin-bottom: 0;
+            }  
+        }
+    }
+}

@@ -25,4 +25,18 @@
             }
         }
     }
+
+    .section--blog{
+        #{$component}{
+            @include bp("sm", "up"){
+                display: flex;
+                width: 380px;
+            }
+            @include bp("lg", "up"){
+                width: 290px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
 }

@@ -1,0 +1,23 @@
+@at-root{
+    $component: ".post__inner";
+
+    #{$component}{
+        position: relative;
+        
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+    }
+
+    .section--blog{
+        #{$component}{
+            padding: 25px 25px 30px;
+            
+            @include bp("sm", "up"){
+            }
+            @include bp("lg", "up"){
+            }
+        }
+    }
+}

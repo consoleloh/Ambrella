@@ -1,0 +1,12 @@
+@at-root{
+    $component: ".post__wrapper";
+
+    #{$component}{
+        @include cut_corners_content();
+
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+    }
+}

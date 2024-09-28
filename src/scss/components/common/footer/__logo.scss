@@ -1,0 +1,10 @@
+@at-root{
+    $component: ".footer__logo";
+
+    #{$component}{
+        margin-bottom: 30px;
+        
+        @include bp("sm", "up"){}
+        @include bp("lg", "up"){}
+    }
+}

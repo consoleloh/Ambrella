@@ -20,6 +20,8 @@ const path = {
 		// html: 'src/*.html',
 		pug: 'src/*.pug',
 		js: [
+				// 'src/js/fancybox.umd.js',
+				// 'src/js/swiper-bundle.min.js',
 				'src/js/script.js',
 			],
 		style: 'src/scss/style.scss',

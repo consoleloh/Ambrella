@@ -1,0 +1,47 @@
+@at-root{
+    $component: ".post__link";
+
+    #{$component}{
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+        }
+    }
+
+    .section--blog{
+        #{$component}{
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 18px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: get-color(secondary);
+            transition: color 0.3s;
+
+            &:after{
+                content: "";
+                display: inline-flex;
+                position: relative;
+                width: 20px;
+                height: 6px;
+                margin: 2px 0 0 12px;
+                background-image: url("data:image/svg+xml;utf8,<svg width='20' height='6' viewBox='0 0 20 6' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M20 3L15 0.113249V5.88675L20 3ZM0 3.5H15.5V2.5H0V3.5Z' fill='%23FD893A'/></svg>");
+                transition: margin-left 0.3s;
+            }
+
+            &:hover{
+                color: get-color(secondary-dark);
+
+                &:after{
+                    margin-left: 20px;
+                }
+            }
+            
+            @include bp("sm", "up"){
+            }
+            @include bp("lg", "up"){
+            }
+        }
+    }
+}

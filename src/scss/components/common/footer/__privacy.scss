@@ -1,0 +1,22 @@
+@at-root{
+    $component: ".footer__privacy";
+
+    #{$component}{
+        transition: color 0.3s;
+
+        &:hover{
+            color: get-color(secondary-dark);
+        }
+        
+        @include bp("sm", "down"){
+            display: block;
+            text-align: center;
+        }
+        @include bp("sm", "up"){
+            position: absolute;
+            top: 80px;
+            left: 0;
+        }
+        @include bp("lg", "up"){}
+    }
+}

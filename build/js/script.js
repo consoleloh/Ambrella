@@ -14,6 +14,7 @@
         document.documentElement.classList.add(isSupportWebp() ? 'webp' : 'no-webp');
     };
 
+
     const collapseProblem = () => {
         document.querySelectorAll('.js-problem-collapse').forEach(problem => {
             problem.addEventListener('click', e => {
@@ -22,6 +23,47 @@
         });
     }
 
+    const carouselBlog = () => {
+        const mql = window.matchMedia('(max-width: 1229px)');
+        const postSlides = document.querySelectorAll('.js-post-slide');
+
+        const slider = () => {
+            let swiper;
+
+            if (mql.matches) {
+                postSlides.forEach(post => {
+                    post.classList.add('swiper-slide');
+                });
+
+                swiper = new Swiper('.swiper', {
+                    loop: false,
+                    spaceBetween: 20,
+                    slidesPerView: 1,
+                    navigation: {
+                      nextEl: '.posts__control--next',
+                      prevEl: '.posts__control--prev',
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2
+                        }
+                    }
+                });
+            } else {
+                if (swiper) swiper.destroy();
+                
+                postSlides.forEach(post => {
+                    post.classList.remove('swiper-slide');
+                    post.attributeStyleMap.clear();
+                });
+            }
+        }
+
+        window.addEventListener('load', slider);
+        window.addEventListener('resize', slider);
+    };
+
     checkWEBPInit();
     collapseProblem();
+    carouselBlog();
 })();
