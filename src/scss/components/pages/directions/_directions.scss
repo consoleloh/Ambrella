@@ -1,0 +1,18 @@
+@at-root{
+    $component: &;
+
+    #{$component}{
+        display: flex;
+        row-gap: 20px;
+
+        @include bp("sm", "up"){
+            row-gap: 10px;
+        }
+        @include bp("lg", "down"){
+            flex-direction: column;
+        }
+        @include bp("lg", "up"){
+            row-gap: 0;
+        }
+    }
+}

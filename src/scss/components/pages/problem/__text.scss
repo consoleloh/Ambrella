@@ -2,18 +2,9 @@
     $component: ".problem__text";
 
     #{$component}{
-        overflow: hidden;
-        max-height: 0;
-        padding-top: 0;
+        display: none;
+        padding-top: 16px;
         font-size: 16px;
         line-height: 19px;
-        transition: all 0.3s;
-    }
-
-    .problems__item--open{
-        #{$component}{
-            max-height: 300px;
-            padding-top: 16px;
-        }
     }
 }

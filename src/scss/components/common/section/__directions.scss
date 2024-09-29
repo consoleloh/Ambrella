@@ -1,0 +1,15 @@
+@at-root{
+    $component: ".section__directions";
+
+    #{$component}{
+
+        @include bp("sm", "up"){
+        }
+        @include bp("lg", "up"){
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+        }
+    }
+}

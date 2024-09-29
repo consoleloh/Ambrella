@@ -1,0 +1,17 @@
+@at-root{
+    $component: ".direction__inner";
+
+    #{$component}{
+        padding: 20px 30px;
+        color: get-color(white);
+        transform: skew(8deg);
+
+        @include bp("sm", "up"){
+            padding: 30px 80px 30px 50px;
+        }
+        @include bp("lg", "up"){
+            padding: 30px 36px 30px 24px;
+            transform: skew(5deg);
+        }
+    }
+}

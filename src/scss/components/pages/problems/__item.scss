@@ -26,9 +26,7 @@
 
         @include bp("sm", "up"){
         }
-        @include bp("lg", "up"){
-            cursor: pointer;
-            
+        @include bp("lg", "up"){            
             &:after{
                 top: 30px;
                 right: 40px;

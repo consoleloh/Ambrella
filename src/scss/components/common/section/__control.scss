@@ -8,6 +8,18 @@
         }
     }
 
+    .section--hero{
+        #{$component}{
+            margin-bottom: 30px;
+            
+            @include bp("sm", "up"){
+                margin-bottom: 50px;
+            }
+            @include bp("lg", "up"){
+            }
+        }
+    }
+
     .section--values{
         #{$component}{
             @include bp("lg", "up"){

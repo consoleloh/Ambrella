@@ -24,6 +24,28 @@
         }
     }
 
+    .section--hero{
+        #{$component}{
+            margin-bottom: 20px;
+            font-size: 26px;
+            line-height: 32px;
+            text-align: left;
+
+            @include bp("lg", "up"){
+                margin-bottom: 30px;
+                font-size: 30px;
+                line-height: 37px;
+            }
+
+            @include bp("lg", "up"){
+                width: 810px;
+                margin-bottom: 20px;
+                font-size: 38px;
+                line-height: 47px;
+            }
+        }
+    }
+
     .section--values{
         #{$component}{
             text-align: left;

@@ -8,6 +8,33 @@
         }
     }
 
+    .section--hero{
+        #{$component}{
+            padding: 58px 0 30px;
+            
+            @include bp("sm", "up"){
+                padding: 70px 0 23px;
+            }
+            @include bp("lg", "up"){
+                position: relative;
+                padding-top: 238px;
+                padding-bottom: 396px;
+
+                &:after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: -300px;
+                    width: 870px;
+                    height: 886px;
+                    background-image: url(../img/hero_banner.webp);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+
     .section--about{
         #{$component}{
             @include bp("sm", "down"){
@@ -67,6 +94,27 @@
                 padding: 0 10px;
             }
             @include bp("lg", "up"){
+            }
+        }
+    }
+
+    .no-webp{
+        .section--hero{
+            #{$component}{
+                &after{
+                    background-image: url(../img/hero_banner.png);
+                }
+            }
+        }
+
+        .section--about{
+            #{$component}{
+                @include bp("sm", "up"){
+                    background-image: url(../img/about_bg_tablet.png);
+                }
+                @include bp("lg", "up"){
+                    background-image: url(../img/about_bg_desktop.png);
+                }
             }
         }
     }
