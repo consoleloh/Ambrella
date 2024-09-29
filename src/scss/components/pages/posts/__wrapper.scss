@@ -2,12 +2,35 @@
     $component: ".posts__wrapper";
 
     #{$component}{
-
         @include bp("sm", "up"){
         }
         @include bp("lg", "up"){
+        }
+    }
+
+    .page--main{
+        #{$component}{
+            @include bp("sm", "up"){
+            }
+            @include bp("lg", "up"){
+                display: flex;
+                gap: 20px;
+            }
+        }
+    }
+
+    .page--blog{
+        #{$component}{
             display: flex;
+            flex-wrap: wrap;
             gap: 20px;
+            
+            @include bp("sm", "up"){
+                gap: 12px;
+            }
+            @include bp("lg", "up"){
+                gap: 20px;
+            }
         }
     }
 }

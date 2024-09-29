@@ -99,4 +99,33 @@
             }
         }
     }
+
+    .page--blog{
+        .section--blog{
+            #{$component}{
+                text-align: left;
+    
+                @include bp("sm", "up"){
+                    font-size: 30px;
+                    line-height: 37px;
+                }
+    
+                @include bp("lg", "up"){
+                }
+            }
+        }
+    }
+    .page--post{
+        .section--post{
+            #{$component}{
+                @include bp("sm", "up"){
+                    font-size: 30px;
+                    line-height: 37px;
+                }
+    
+                @include bp("lg", "up"){
+                }
+            }
+        }
+    }
 }

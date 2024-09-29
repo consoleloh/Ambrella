@@ -2,14 +2,14 @@
     $component: ".section__posts";
 
     #{$component}{
+        overflow: visible;
+        
         @include bp("sm", "down"){
-            overflow: visible;
             margin: 0 -20px 30px;
             padding: 0 40px;
         }
 
         @include bp("sm", "up"){
-            overflow: visible;  ;
             margin-bottom: 25px;
         }
         @include bp("lg", "up"){

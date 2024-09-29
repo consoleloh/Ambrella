@@ -9,4 +9,18 @@
         @include bp("lg", "up"){
         }
     }
+
+    .page--blog{
+        #{$component}{
+            flex-basis: 100%;
+            
+            @include bp("sm", "up"){
+                flex-basis: calc(100% / 2 - 6px);
+            }
+            @include bp("lg", "up"){
+                gap: 20px;
+                flex-basis: calc(100% / 3 - 14px);
+            }
+        }
+    }
 }

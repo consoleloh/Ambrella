@@ -42,10 +42,10 @@
 
     const scrollTo = () => {
         const headerHeight = document.querySelector('.page__header').offsetHeight;
-
-        document.querySelectorAll('a[href^="#"]').forEach(link => {
+        
+        const clickListener = (link) => {
             link.addEventListener('click', (e) => {
-                e.preventDefault();
+                if (document.body.classList.contains('page--main')) e.preventDefault();
 
                 const section = document.querySelector(link.hash);
                 let top = window.scrollY + section.getBoundingClientRect().top - headerHeight;
@@ -62,12 +62,30 @@
 
                 document.querySelector('.page__header').classList.remove('page__header--opened');
             });
+        };
+
+        document.querySelectorAll('a[href*="#"]').forEach(link => clickListener(link));
+        window.addEventListener('load', () => {
+            if (location.hash){
+                setTimeout(() => {
+                    document.querySelector(`a[href*="${location.hash}"]`).click();
+                }, 0);
+            }
         });
     };
     
     const popupsInit = () => {
         Fancybox.bind('[data-fancybox]', {
             closeButton: false
+        });
+    };
+
+    const videoPlay = () => {
+        document.querySelectorAll('video').forEach(video => {
+            video.addEventListener('click', () => {
+                video.setAttribute('controls', "");
+                video.play();
+            });
         });
     };
 
@@ -96,7 +114,7 @@
                     post.classList.add('swiper-slide');
                 });
 
-                swiper = new Swiper('.swiper', {
+                swiper = new Swiper('.js-blog-carousel', {
                     loop: false,
                     spaceBetween: 20,
                     slidesPerView: 1,
@@ -122,6 +140,42 @@
 
         window.addEventListener('load', slider);
         window.addEventListener('resize', slider);
+    };
+        
+    const postGalleryThumbs = new Swiper('.js-post-gallery-thumbs', {
+        loop: false,
+        slidesPerView: 3,
+        spaceBetween: 8,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 3,
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    draggable: true
+                }
+            },
+            768: {
+                slidesPerView: 6
+            }
+        }
+    });
+
+    const galleryPost = () => {
+        const postGallery = new Swiper('.js-post-gallery', {
+            loop: false,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            thumbs: {
+                swiper: postGalleryThumbs
+            },
+        });
+
+        // postGallery.controller.control = postGalleryThumbs;
+        // postGalleryThumbs.controller.control = postGallery;
     };
     
     const slideUp = (target, duration = 500) => {
@@ -192,6 +246,8 @@
     scrollMenu();
     scrollTo();
     popupsInit();
+    videoPlay();
     collapseProblem();
     carouselBlog();
+    galleryPost();
 })();

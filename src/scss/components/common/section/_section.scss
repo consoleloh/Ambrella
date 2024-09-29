@@ -89,6 +89,39 @@
         }
     }
 
+    .page--blog{
+        #{$component}{
+            &--blog{
+                margin: 60px 0;
+
+                @include bp("sm", "up"){
+                    margin-top: 70px;
+                }
+                @include bp("lg", "up"){
+                    margin-top: 46px;
+                    margin-bottom: 100px;
+                }
+            }
+        }
+    }
+
+    .page--post{
+        #{$component}{
+            &--post{
+                overflow: hidden;
+                margin: 60px 0;
+
+                @include bp("sm", "up"){
+                    margin-top: 70px;
+                }
+                @include bp("lg", "up"){
+                    margin-top: 46px;
+                    margin-bottom: 100px;
+                }
+            }
+        }
+    }
+
     .no-webp{
         #{$component}{
             &--methods{

@@ -3,12 +3,76 @@
 
     #{$component}{
         @include bp("sm", "up"){
-            display: flex;
-            flex-direction: column;
-            row-gap: 52px;
         }
         @include bp("lg", "up"){
-            row-gap: 88px;
+        }
+    }
+
+    .section--about{
+        #{$component}{
+            @include bp("sm", "up"){
+                display: flex;
+                flex-direction: column;
+                row-gap: 52px;
+            }
+            @include bp("lg", "up"){
+                row-gap: 88px;
+            }
+        }
+    }
+
+    .section--post{
+        #{$component}{
+            @include bp("sm", "up"){
+            }
+            @include bp("lg", "up"){
+                width: 845px;
+                margin: 0 auto;
+            }
+
+            p{
+                margin-bottom: 20px;
+                font-size: 16px;
+                line-height: 19px;
+
+                @include bp("sm", "up"){
+                }
+                @include bp("lg", "up"){
+                    margin-bottom: 40px;
+                }
+            }
+
+            img{
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+
+            & > img{
+                margin-bottom: 40px;
+
+                @include bp("sm", "up"){
+                    margin-bottom: 30px;
+                }
+                @include bp("lg", "up"){
+                    margin-bottom: 40px;
+                }
+            }
+
+            video{
+                display: block;
+                max-width: 100%;
+                margin-bottom: 40px;
+                cursor: pointer;
+
+                @include bp("sm", "up"){
+                    margin-bottom: 30px;
+                }
+                @include bp("lg", "up"){
+                    margin-bottom: 40px;
+                }
+            }
         }
     }
 }
