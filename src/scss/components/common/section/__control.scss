@@ -51,4 +51,9 @@
             }
         }
     }
+    .section--404{
+        #{$component}{
+            width: auto;
+        }
+    }
 }

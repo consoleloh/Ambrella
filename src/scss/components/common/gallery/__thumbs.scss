@@ -33,24 +33,26 @@
             overflow: visible;
         }
 
-        @include bp("lg", "up"){
-            padding: 0 36px;
-
-            &:before,
-            &:after{
-                content: "";
-                position: absolute;
-                bottom: 0;
-                width: 32px;
-                height: 68px;
-                background-color: get-color(white);
-                z-index: 2;
-            }
-            &:before{
-                left: 0;
-            }
-            &:after{
-                right: 0;
+        &--controls{
+            @include bp("lg", "up"){
+                padding: 0 36px;
+    
+                &:before,
+                &:after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    width: 32px;
+                    height: 68px;
+                    background-color: get-color(white);
+                    z-index: 2;
+                }
+                &:before{
+                    left: 0;
+                }
+                &:after{
+                    right: 0;
+                }
             }
         }
 

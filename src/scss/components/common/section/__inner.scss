@@ -97,6 +97,11 @@
             }
         }
     }
+    .section--404{
+        #{$component}{
+            text-align: center;
+        }
+    }
 
     .no-webp{
         .section--hero{

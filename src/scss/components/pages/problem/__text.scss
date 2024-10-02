@@ -2,9 +2,19 @@
     $component: ".problem__text";
 
     #{$component}{
-        display: none;
-        padding-top: 16px;
+        overflow: hidden;
+        padding-top: 0;
         font-size: 16px;
         line-height: 19px;
+        max-height: 0;
+        transition: all 0.3s ease-out;
+    }
+
+    .problems__item--open{
+        #{$component}{
+            max-height: 400px;
+            padding-top: 16px;
+            transition: all 0.3s ease-in;
+        }
     }
 }

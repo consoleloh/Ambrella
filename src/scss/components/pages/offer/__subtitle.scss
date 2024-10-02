@@ -7,6 +7,9 @@
         border-bottom: 1px solid get-color(grey-light);
 
         @include bp("sm", "up"){
+            display: flex;
+            align-items: center;
+            min-height: 107px;
         }
     }
 }

@@ -128,4 +128,36 @@
             }
         }
     }
+    .page--simple{
+        .section--content{
+            #{$component}{
+                font-size: 24px;
+                line-height: 27px;
+
+                @include bp("sm", "up"){
+                    font-size: 30px;
+                    line-height: 37px;
+                }
+    
+                @include bp("lg", "up"){
+                }
+            }
+        }
+    }
+    .section--404{
+        #{$component}{
+            margin-bottom: 0;
+            font-size: 100px;
+            line-height: 1em;
+            color: get-color(secondary);
+
+            @include bp("sm", "up"){
+                font-size: 180px;
+            }
+
+            @include bp("lg", "up"){
+                font-size: 200px;
+            }
+        }
+    }
 }

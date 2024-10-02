@@ -78,6 +78,28 @@
         Fancybox.bind('[data-fancybox]', {
             closeButton: false
         });
+
+        document.addEventListener('wpcf7mailsent', (e) => {
+            Fancybox.close();
+            new Fancybox([
+                {
+                    src: document.getElementById('popupSuccess'),
+                    type: 'html',
+                    closeButton: false
+                }
+            ]);
+        }, false);
+
+        document.addEventListener('wpcf7mailfailed', (e) => {
+            Fancybox.close();
+            new Fancybox([
+                {
+                    src: document.getElementById('popupError'),
+                    type: 'html',
+                    closeButton: false
+                }
+            ]);
+        }, false);
     };
 
     const videoPlay = () => {
@@ -94,10 +116,7 @@
             const control = problem.querySelector('.problem__title');
 
             control.addEventListener('click', e => {
-                const text = problem.querySelector('.problem__text');
-
                 problem.classList.toggle('problems__item--open');
-                slideToggle(text, 300);
             });
         });
     }
@@ -141,30 +160,30 @@
         window.addEventListener('load', slider);
         window.addEventListener('resize', slider);
     };
-        
-    const postGalleryThumbs = new Swiper('.js-post-gallery-thumbs', {
-        loop: false,
-        slidesPerView: 3,
-        spaceBetween: 8,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 3,
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                    draggable: true
-                }
-            },
-            768: {
-                slidesPerView: 6
-            }
-        }
-    });
 
     const galleryPost = () => {
+        const postGalleryThumbs = new Swiper('.js-post-gallery-thumbs', {
+            loop: false,
+            slidesPerView: 3,
+            spaceBetween: 8,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 3,
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                        draggable: true
+                    }
+                },
+                768: {
+                    slidesPerView: 6
+                }
+            }
+        });
+
         const postGallery = new Swiper('.js-post-gallery', {
             loop: false,
             slidesPerView: 1,
@@ -173,72 +192,6 @@
                 swiper: postGalleryThumbs
             },
         });
-
-        // postGallery.controller.control = postGalleryThumbs;
-        // postGalleryThumbs.controller.control = postGallery;
-    };
-    
-    const slideUp = (target, duration = 500) => {
-        target.style.transitionProperty = 'height, margin, padding';
-        target.style.transitionDuration = duration + 'ms';
-        target.style.boxSizing = 'border-box';
-        target.style.height = target.offsetHeight + 'px';
-        target.offsetHeight;
-        target.style.overflow = 'hidden';
-        target.style.height = 0;
-        target.style.paddingTop = 0;
-        target.style.paddingBottom = 0;
-        target.style.marginTop = 0;
-        target.style.marginBottom = 0;
-        window.setTimeout(() => {
-            target.style.display = 'none';
-            target.style.removeProperty('height');
-            target.style.removeProperty('padding-top');
-            target.style.removeProperty('padding-bottom');
-            target.style.removeProperty('margin-top');
-            target.style.removeProperty('margin-bottom');
-            target.style.removeProperty('overflow');
-            target.style.removeProperty('transition-duration');
-            target.style.removeProperty('transition-property');
-        }, duration);
-    };
-     
-    const slideDown = (target, duration = 500) => {
-        target.style.removeProperty('display');
-
-        let display = window.getComputedStyle(target).display;
-     
-        if (display === 'none') display = 'block';
-        
-        target.style.display = display;
-
-        const height = target.offsetHeight;
-
-        target.style.overflow = 'hidden';
-        target.style.height = 0;
-        target.style.paddingTop = 0;
-        target.style.paddingBottom = 0;
-        target.style.marginTop = 0;
-        target.style.marginBottom = 0;
-        target.offsetHeight;
-        target.style.boxSizing = 'border-box';
-        target.style.transitionProperty = "height, margin, padding";
-        target.style.transitionDuration = duration + 'ms';
-        target.style.height = height + 'px';
-        target.style.removeProperty('padding-top');
-        target.style.removeProperty('padding-bottom');
-        target.style.removeProperty('margin-top');
-        target.style.removeProperty('margin-bottom');
-        window.setTimeout(() => {
-            target.style.removeProperty('height');
-            target.style.removeProperty('overflow');
-            target.style.removeProperty('transition-duration');
-            target.style.removeProperty('transition-property');
-        }, duration);
-    };
-
-    const slideToggle = (target, duration = 500) => {
-        return window.getComputedStyle(target).display === 'none' ? slideDown(target, duration) : slideUp(target, duration);
     };
 
     checkWEBP();

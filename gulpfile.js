@@ -171,7 +171,7 @@ function fontsBuild(){
 function pugBuild(){
 	return gulp.src(path.src.pug)
 		.pipe(pug({
-      		pretty: false,
+      		pretty: true,
 			plugins: [pugbem]
 		}))
 		.pipe(gulp.dest(path.build.pug))
